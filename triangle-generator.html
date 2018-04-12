@@ -102,7 +102,7 @@
 	}
 </style>
 
-<script src="delaunay.js"></script>
+<script src="http://www.fearlessfreelance.com/projects/js/delaunay.js"></script>
 
 </head>
 <body>
@@ -154,16 +154,20 @@
 
     <script>
         // run the generator to load defaults
+        var imgWidth = window.innerWidth - 40;
+		document.getElementById('imgWidth').value = imgWidth;
+		
+		var imgHeight = (window.innerHeight / 2).toFixed(0);
+		document.getElementById('imgHeight').value = imgHeight;
+		
         generateTris();
 		
 		function generateTris() {
 		var no = document.getElementById('numTri').value;
 		
-		var imgWidth = window.innerWidth - 40;
-		document.getElementById('imgWidth').value = imgWidth;
+		var imgWidth = document.getElementById('imgWidth').value;
 		
-		var imgHeight = (window.innerHeight / 2).toFixed(0);
-		document.getElementById('imgHeight').value = imgHeight;
+		var imgHeight = document.getElementById('imgHeight').value;
 		
 		var colorOne = document.getElementById('colorOne').value;
 		var colorTwo = document.getElementById('colorTwo').value;
